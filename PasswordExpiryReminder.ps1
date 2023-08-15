@@ -37,21 +37,21 @@ $maxPasswordAge = [TimeSpan]::FromDays(30)
 [xml]$XAML = @"
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Change Password" Height="300" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Change Password" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Label x:Name="expiryLabel" Content="Your password will expire in X days. Please change it." HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
-
-        <Label Content="Old Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
-        <PasswordBox x:Name="oldPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10,30,0,0"/>
         
-        <Label Content="New Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,60,0,0"/>
-        <PasswordBox x:Name="password1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10,80,0,0"/>
+        <Label Content="Old Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,40,0,0"/>
+        <PasswordBox x:Name="oldPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10,60,0,0"/>
         
-        <Label Content="Confirm Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,110,0,0"/>
-        <PasswordBox x:Name="password2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10,130,0,0"/>
+        <Label Content="New Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0"/>
+        <PasswordBox x:Name="password1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10,110,0,0"/>
+        
+        <Label Content="Confirm Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,140,0,0"/>
+        <PasswordBox x:Name="password2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="10,160,0,0"/>
 
-        <Button x:Name="changeButton" Content="Change Password" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,170,0,0"/>
-        <TextBlock x:Name="status" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,210,0,0" TextWrapping="Wrap" Width="300"/>
+        <Button x:Name="changeButton" Content="Change Password" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0"/>
+        <TextBlock x:Name="status" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0" TextWrapping="Wrap" Width="300"/>
     </Grid>
 </Window>
 "@

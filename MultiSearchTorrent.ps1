@@ -76,13 +76,13 @@ Function Fetch-TorrentDetails {
 }
 
 # Define the base URL
-$baseUrl = "https://www.oxtorrent.vg/recherche/"
+$baseUrl = "https://www.oxtorrent.uno/recherche/"
 
 # Define the search parameters
-$searchParams = @("S.W.A.T", "Another Show", "Yet Another Show") # Add more search terms as needed
+$searchParams = @("The Rookie : le flic de Los Angeles") # Add more search terms as needed
 
 # Define the filter criteria
-$filterCriteria = @('*french*', '*S05*') # Add more criteria as needed
+$filterCriteria = @('*french*', '*S04*') # Add more criteria as needed
 
 # Fetch the torrent details
 $results = Fetch-TorrentDetails -baseUrl $baseUrl -searchParams $searchParams -filterCriteria $filterCriteria

@@ -32,20 +32,11 @@ Function Fetch-TorrentDetails {
         $detailData = @()
 
         foreach ($element in $elements) {
-            $title = $element.GetAttribute('title')
-            $matchesAllCriteria = $true
-            foreach ($criteria in $filterCriteria) {
-                if (-not ($title -like $criteria)) {
-                    $matchesAllCriteria = $false
-                    break
-                }
-            }
+            $title = $element.GetAttribute('Text')
 
-            if ($matchesAllCriteria) {
-                $detailData += [PSCustomObject]@{
-                    Title = $title
-                    DetailUrl = $element.GetAttribute('href')
-                }
+            $detailData += [PSCustomObject]@{
+                Title = $title
+                DetailUrl = $element.GetAttribute('href')
             }
         }
 
@@ -79,10 +70,7 @@ Function Fetch-TorrentDetails {
 $baseUrl = "https://www.oxtorrent.uno/recherche/"
 
 # Define the search parameters
-$searchParams = @("The Rookie : le flic de Los Angeles") # Add more search terms as needed
-
-# Define the filter criteria
-$filterCriteria = @('*french*', '*S04*') # Add more criteria as needed
+$searchParams = @("The Rookie : le flic de Los Angeles S04") # Add more search terms as needed
 
 # Fetch the torrent details
 $results = Fetch-TorrentDetails -baseUrl $baseUrl -searchParams $searchParams -filterCriteria $filterCriteria
